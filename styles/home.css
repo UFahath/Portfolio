@@ -180,7 +180,7 @@ nav{
   border:3px solid #006989;
   text-align: center;
   position: relative;
-  background:url(/assets/myimage2.png) no-repeat center;
+  background:url(../assets/myimage2.png) no-repeat center;
   border-radius: var(--circleradius);
   /* border-radius: 0 var(--px_40radius) 0 var(--px_40radius); */
   background-size: cover;
