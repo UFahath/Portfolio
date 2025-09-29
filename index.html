@@ -1,11 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="styles/home.css">
+   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
 </head>
+
 <body>
-  <h1>Test host</h1>
+  <!-- home -->
+  <div class="home">
+
+    <!-- navigation bar -->
+    <nav>
+      <!-- 1 -->
+      <div class="logo">UF</div>
+
+      <!-- 2 -->
+      <ul class="nav-lists">
+        <li class="hideonsmallerdevice vcenter">
+          <a href="" class="vcenter">Home</a>
+        </li>
+        <li class="hideonsmallerdevice vcenter">
+          <a href="" class="vcenter">About Us</a>
+        </li>
+        <li class="hideonsmallerdevice vcenter">
+          <a href="" class="vcenter">Contact Us</a>
+        </li>
+        <li class="hideonsmallerdevice vcenter">
+          <a href="" class="vcenter">FAQ</a>
+        </li>
+      </ul>
+
+      <!-- 3 -->
+      <div class="btnDiv">
+        <a href="">Download <i class="uil uil-file"></i></a>
+      </div>
+    </nav>
+
+    <!-- Intro section -->
+     <div class="intro-section makeflexwithCentered">
+      <!-- 1 -->
+        <div class="detailspart">
+          <!-- name badge(1) -->
+           <h5 class="name">
+            <span class="name-badge">U Abdul Rahuman Fahath</span>
+           </h5>
+
+           <!-- role text (2)-->
+            <h1 class="role">
+              <span class="iam">I'm</span><br>
+              <span id="typed"></span>
+            </h1>
+            
+            <!-- role description(3) -->
+            <p class="role-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit sint sit maxime necessitatibus veniam harum incidunt expedita, aut eligendi.</p>
+
+           <!-- call to action buttons -->
+            <div class="ctabuttons">
+              <button class="btn-extra1">Hire me</button>&nbsp;&nbsp;
+              <button class="btn-extra1">Download</button>
+            </div>
+
+            <!-- icon group -->
+             <div class="social-icons makeflexwithCentered">
+             <a href=""><i class="uil uil-github"></i></a>
+              <a href=""><i class="uil uil-linkedin"></i></a>
+              <a href=""><i class="uil uil-instagram"></i></a>
+             </div>
+
+        </div>
+        <div class="photopart">
+          <!-- <span class="lessthan comparison">&lt;</span>
+          <span>Hello</span>
+          <span class="greaterthan comparison">&gt;</span> -->
+        </div>
+     </div>
+
+
+
+     <!-- 2 -->
+
+     <div class="nextpart">
+
+     </div>
+
+  </div>
+
+   <!-- script -->
+    <script>
+      // option for typed object
+      let option={
+        strings:["Frontend Developer","Web Developer","Software Developer"],
+        typeSpeed:60,
+        backSpeed:60,
+        startDelay:800,
+        backDelay:1500,
+        loop:true,
+      };
+
+      // typed object
+      let typed=new Typed("#typed",option);
+      // gsap.registerPlugin(ScrollTrigger);
+// let timelne=gsap.timeline();
+gsap.from(".detailspart",{
+  x:-550,
+  duration:2,
+  ease:"power3.inOut",
+});
+gsap.from(".photopart",{
+  x:550,
+  duration:2,
+  ease:"power3.inOut"
+});
+     gsap.to(".photopart", {
+            z:100,
+            // rotateX:90,
+            // transformOrigin:"center 40%",
+  // rotationY:360,
+  scaleX: 0.8,
+  skewY:10,
+  //  borderRadius:0,
+   skewX:10,
+  //  x:10,
+  // z: -300,
+  repeat:-1,
+  yoyo:true,
+  boxShadow:"50px 4px 0px 0px #006989",
+  delay:2,
+  duration: 6, 
+  ease: "power3.inOut"
+});
+
+     
+    </script>
 </body>
+
 </html>
